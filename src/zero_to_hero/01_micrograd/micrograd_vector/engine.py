@@ -1,11 +1,12 @@
 import numpy as np
+from utils.training import _unbroadcast
 
 class Value:
     """ stores a single scalar value and its gradient """
 
     def __init__(self, data, _children=(), _op=''):
-        self.data = data
-        self.grad = 0
+        self.data = np.asarray(data, dtype=float)
+        self.grad = np.zeros_like(self.data)
         self.vel = 0
         self.var = 0
         # internal variables used for autograd graph construction
@@ -18,8 +19,8 @@ class Value:
         out = Value(self.data + other.data, (self, other), '+')
 
         def _backward():
-            self.grad += out.grad
-            other.grad += out.grad
+            self.grad += _unbroadcast(out.grad, self.data.shape)
+            other.grad += _unbroadcast(out.grad, self.data.shape)
         out._backward = _backward
 
         return out
@@ -108,7 +109,7 @@ class Value:
         build_topo(self)
 
         # go one variable at a time and apply the chain rule to get its gradient
-        self.grad = 1
+        self.grad = np.ones_like(self.data)
         for v in reversed(topo):
             v._backward()
 
