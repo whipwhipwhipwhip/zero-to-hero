@@ -1,7 +1,7 @@
 import numpy as np
 
-from ml_learning.micrograd_vector.nn import MLP
-from ml_learning.utils.training import forward_backward
+from micrograd_scalar.nn import MLP
+from utils.training import forward_backward
 
 def train(x, y, nin: int, nouts: list[int], loss_function,
          opt_params, epochs: int = 20, training_method: str = "SGD"):

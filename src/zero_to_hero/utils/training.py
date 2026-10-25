@@ -12,11 +12,3 @@ def forward_backward(x_data, y_data, loss_function, nn):
     loss.backward()
 
     return loss
-
-def _unbroadcast(grad, shape):
-    while grad.ndim > len(shape):
-        grad = grad.sum(axis=0)
-    for i, s in enumerate(shape):
-        if s == 1:
-            grad = grad.sum(axis=i, keepdims=True)
-    return grad

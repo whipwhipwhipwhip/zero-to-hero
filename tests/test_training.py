@@ -2,8 +2,8 @@ import random
 
 import pytest
 
-from ml_learning.micrograd_vector.nn import MLP
-from ml_learning.micrograd_vector.training import (
+from zero_to_hero.lecture_01_micrograd.micrograd_scalar.nn import MLP
+from zero_to_hero.lecture_01_micrograd.micrograd_scalar.training import (
     adam,
     adamW,
     ada_grad,

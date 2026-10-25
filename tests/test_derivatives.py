@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from ml_learning.micrograd_vector.engine import Value
-from ml_learning.utils.differentiation import derivative_numerical
+from zero_to_hero.lecture_01_micrograd.micrograd_scalar.engine import Value
+from zero_to_hero.utils.differentiation import derivative_numerical
 
 
 def assert_grad_matches_numerical(value_fn, numeric_fn, x0, atol=1e-3):
