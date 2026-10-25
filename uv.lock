@@ -1478,8 +1478,8 @@ wheels = [
 
 [[package]]
 name = "nanotok"
-version = "0.0.2"
-source = { git = "https://github.com/whipwhipwhipwhip/nanotok#9237bd42233f6d9790d0bfb6f99d67ded74206f0" }
+version = "0.0.4"
+source = { git = "https://github.com/whipwhipwhipwhip/nanotok?tag=v0.0.4#88c341893527dfbc230542def223f94140ef3e61" }
 dependencies = [
     { name = "regex" },
     { name = "tiktoken" },
@@ -3067,7 +3067,7 @@ dev = [
 requires-dist = [
     { name = "graphviz", specifier = ">=0.20" },
     { name = "matplotlib", specifier = ">=3.10" },
-    { name = "nanotok", git = "https://github.com/whipwhipwhipwhip/nanotok" },
+    { name = "nanotok", git = "https://github.com/whipwhipwhipwhip/nanotok?tag=v0.0.4" },
     { name = "numpy", specifier = ">=2.2" },
     { name = "optuna", specifier = ">=4.0" },
     { name = "scikit-learn", specifier = ">=1.6" },
