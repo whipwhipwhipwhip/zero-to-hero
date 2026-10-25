@@ -1,6 +1,6 @@
 import numpy as np
 
-from zero_to_hero.lecture_01_micrograd.micrograd_vector.nn import MLP
+from zero_to_hero.part_01_micrograd.micrograd_scalar.nn import MLP
 from zero_to_hero.utils.training import forward_backward
 
 def train(x, y, nin: int, nouts: list[int], loss_function,

@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from zero_to_hero.lecture_01_micrograd.micrograd_scalar.engine import Value
+from zero_to_hero.part_01_micrograd.micrograd_scalar.engine import Value
 from zero_to_hero.utils.differentiation import derivative_numerical
 
 

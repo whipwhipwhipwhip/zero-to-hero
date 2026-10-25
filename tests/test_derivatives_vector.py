@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from zero_to_hero.lecture_01_micrograd.micrograd_vector.engine import Value, softmax
+from zero_to_hero.part_01_micrograd.micrograd_vector.engine import Value, softmax
 
 
 def numerical_grads(f, arrays, h=1e-6):

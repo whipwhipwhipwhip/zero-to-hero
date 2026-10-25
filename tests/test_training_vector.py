@@ -1,9 +1,9 @@
 import numpy as np
 import pytest
 
-from zero_to_hero.lecture_01_micrograd.micrograd_vector.engine import Value
-from zero_to_hero.lecture_01_micrograd.micrograd_vector.nn import MLP
-from zero_to_hero.lecture_01_micrograd.micrograd_vector.training import (
+from zero_to_hero.part_01_micrograd.micrograd_vector.engine import Value
+from zero_to_hero.part_01_micrograd.micrograd_vector.nn import MLP
+from zero_to_hero.part_01_micrograd.micrograd_vector.training import (
     adam,
     adamW,
     ada_grad,

@@ -2,7 +2,7 @@ import pytest
 import torch
 from sklearn.model_selection import GridSearchCV
 
-from ml_learning.makemore_conor.makemore import (
+from zero_to_hero.part_02_makemore.makemore import (
     NgramEstimator,
     build_context_stoi,
     build_dataset,
