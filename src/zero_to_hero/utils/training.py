@@ -1,8 +1,7 @@
 def forward_backward(x_data, y_data, loss_function, nn):
 
     # zero grad
-    for p in nn.parameters():
-        p.grad = 0.0
+    nn.zero_grad()
 
     # forward pass - what is the current loss?
     loss = loss_function(x_data, y_data, nn)

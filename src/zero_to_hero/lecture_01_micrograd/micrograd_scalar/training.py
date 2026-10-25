@@ -1,13 +1,13 @@
 import numpy as np
 
-from micrograd_scalar.nn import MLP
-from utils.training import forward_backward
+from zero_to_hero.lecture_01_micrograd.micrograd_scalar.nn import MLP
+from zero_to_hero.utils.training import forward_backward
 
 def train(x, y, nin: int, nouts: list[int], loss_function,
          opt_params, epochs: int = 20, training_method: str = "SGD"):
   
     supported_training = ["SGD", "momentum", "ada_grad", "rms_prop", "adam", "adamW"]
-    assert training_method in supported_training, f"Only training supported currently is {print(*supported_training, sep=", ")}"
+    assert training_method in supported_training, f"Only training supported currently is {', '.join(supported_training)}"
     network = MLP(nin, nouts)
 
     match training_method:
@@ -24,7 +24,7 @@ def train(x, y, nin: int, nouts: list[int], loss_function,
         case "adamW":
             trained = adamW(x, y, network, epochs, loss_function, opt_params)
         case _:
-            raise ValueError(f"Only training supported currently is {print(*supported_training, sep=", ")}")
+            raise ValueError(f"Only training supported currently is {', '.join(supported_training)}")
     
     return trained
 

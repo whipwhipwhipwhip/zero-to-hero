@@ -1,5 +1,5 @@
 import numpy as np
-from micrograd_vector.engine import Value
+from zero_to_hero.lecture_01_micrograd.micrograd_vector.engine import Value
 
 class Module:
 

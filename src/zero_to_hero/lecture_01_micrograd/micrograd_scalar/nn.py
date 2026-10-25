@@ -1,5 +1,5 @@
 import random
-from micrograd_scalar.engine import Value
+from zero_to_hero.lecture_01_micrograd.micrograd_scalar.engine import Value
 
 class Module:
 
