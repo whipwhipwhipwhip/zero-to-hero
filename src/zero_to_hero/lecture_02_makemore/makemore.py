@@ -7,16 +7,12 @@ the preceding (gram - 1) characters, using a one-hot-in/softmax-out linear
 layer trained with NLL + L2 (equivalent to additively-smoothed counts).
 """
 
-import numpy as np
 import argparse
 from itertools import product
 from sklearn.base import BaseEstimator
-from sklearn.model_selection import GridSearchCV
 
 import torch
 import torch.nn.functional as F
-
-from ml_learning.utils.parsing import get_vocab
 
 VOCAB = list('.abcdefghijklmnopqrstuvwxyz')
 
